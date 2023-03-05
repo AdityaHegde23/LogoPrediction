@@ -1,2 +1,3 @@
 venv/
 backend/src/__pycache__/
+frontend/node_modules/
