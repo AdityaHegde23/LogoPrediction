@@ -11,8 +11,8 @@ def index():
     return {'message': 'Welcome to Logo Prediction app'}
 
 @app.post("/items")
-async def root(item: str):
-    return {'message':f'String is {item}'}
+async def root(item: schema.LogoInfo):
+    return [{'message':item}]
 
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
